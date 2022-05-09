@@ -3,7 +3,7 @@
 <html>
 
 <head>
-  <title>add task</title>
+  <title>Add Task</title>
 
   <!--
 Assignment: CSE442 project home page
@@ -18,12 +18,12 @@ Editor:  BBEdit
     <meta charset="utf-8">
 {#  <meta charset="UTF-8" />#}
 
-  <link href="CSE442.css" rel="stylesheet" />
 
   <style>
     * {
       margin: 0;
       padding: 0;
+      background-color: #f7ecbc;
     }
 
     .container {
@@ -38,13 +38,15 @@ Editor:  BBEdit
     }
 
     .button {
-      color: black;
-      padding: 10px 22px;
-      text-align: center;
-      text-decoration: none;
-      font-size: 16px;
-      margin: 4px 2px;
-    }
+		color: black;
+		padding: 10px 22px;
+		text-align: center;
+		text-decoration: none;
+		font-size: 19px;
+		margin: 4px 2px;
+		box-shadow: 2px 2px 4px #000000;
+		width: 100%;
+		}
 
     table {
       vertical-align: top;
@@ -120,6 +122,9 @@ Editor:  BBEdit
     }
     a{
       text-decoration: none;
+    }
+    label{
+    background-color: #e6ad4c;
     }
 
 
@@ -203,6 +208,8 @@ Editor:  BBEdit
 	  color: #1a79ca;
 	  text-decoration:none;
 	  font-weight:600;
+	  background-color: #e6ad4c;
+	  
 }
 .option{
   /*用div的样式代替select的样式*/
@@ -275,32 +282,37 @@ Editor:  BBEdit
 
     </div>
   </div>
-  <div class="container">
+  <div class="container" >
+  
     <div class="history">
       <div class="box">
-        <a HREF="/add_task"><button class="button">add Task</button></a>
+        <a HREF="/add_task"><button class="button">Add Task</button></a>
       </div>
       <div class="box">
-        <a HREF="/history"><button class="button">view History</button></a>
+        <a HREF="/history"><button class="button">View History</button></a>
       </div>
         <div class="box">
-        <a HREF="/index"><button class="button">Index</button></a>
+        <a HREF="/index"><button class="button">Home Page</button></a>
       </div>
     </div>
-      <div class="popup" style="margin-left: 500px;margin-top: 30px">
-        <div class="close-btn">&times;</div>
-        <form class="form" method="post" action="/add_task">
-      	  <h2>Add Task</h2>
+    
+    
+      <div class="popup" style="background-color: #e6ad4c; margin-left: 500px;margin-top: 30px">
+        <div class="close-btn" >&times;</div>
+        <form class="form" style="background-color: #e6ad4c;" method="post" action="/add_task">
+      	  <h2 style="font-size: 40px; background-color: #e6ad4c;">Add Task</h2>
 
-      	  <div class="form-element">
+      	  <div class="form-element" style="margin-right: 22px; background-color: #e6ad4c;">
             <label for="email1">Task name</label>
             <input id="email1" type="text" placeholder="Task name" name="name" value="{{ name }}">
           </div>
-             <div class="form-element">
+          
+          <div class="form-element" style="margin-right: 22px; background-color: #e6ad4c;">
             <label for="email2">Task time</label>
             <input id="email2" type="text" placeholder="03-11-2022 12:00" name="begin" value="{{ begin }}">
           </div>
-             <div class="form-element">
+          
+          <div class="form-element" style="background-color: #e6ad4c;">
             <label for="email3">Task priority</label>
                  <div class="option">
                  <select name="priority">
@@ -312,7 +324,12 @@ Editor:  BBEdit
 {#            <input id="email4" type="text" placeholder="priority" name="priority" value="{{ priority }}">#}
           </div>
 
-          <div class="form-element">
+          <div class="form-element" style="background-color: #e6ad4c;">
+            <label for="email2">Task description</label>
+            <input id="email2" type="text" placeholder="input your task description" name="description" value="{{ description }}">
+          </div>
+
+          <div class="form-element" style="margin: 30px 0 20px 0; background-color: #e6ad4c; ">
           <button id = "sign_in" type="submit"> Add Task</button>
           </div>
         </form>
