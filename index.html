@@ -1,132 +1,175 @@
 <!doctype html>
 
+<html lang="en">
+
 <html>
 
+<!--head starts-->
 <head>
-  <title>Home Page</title>
+  	<title>Home Page</title>
 
   <!--
-Assignment: CSE442 project home page
-Author: Niubility
-Date: Feb. 27th, 2022 file was last edited
-Editor:  BBEdit
--->
-  <meta name="description" content="Homepage">
-  <meta name="author" content="Niubility">
-  <meta name="keywords" content="HTML, CSS, JavaScript">
-  <meta name="generator" content="BBEdit">
-    <meta charset="utf-8">
-{#  <meta charset="UTF-8" />#}
+	Assignment: CSE442 project home page
+	Author: Niubility
+	Date: Feb. 27th, 2022 file was last edited
+	Editor:  BBEdit
+	-->
+  	<meta name="description" content="Homepage">
+  	<meta name="author" content="Niubility">
+	<meta name="keywords" content="HTML, CSS, JavaScript">
+  	<meta name="generator" content="BBEdit">
+	<meta charset="utf-8">
+	{#  <meta charset="UTF-8" />#}
 
-  <link href="CSE442.css" rel="stylesheet" />
+	  <link href="CSE442.css" rel="stylesheet" />
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-    }
+	  <style>
+    	* {
+  	   	margin: 0;
+ 	   	padding: 0;
+ 	   	background-color: #f7ecbc;
 
-    .container {
-      position: relative;
-    }
+		}
 
-    .history {
-      position: absolute;
-      z-index: 1;
-      top: 0;
-      left: 10%;
-    }
+		.container {
+		position: relative;
+		}
 
-    .button {
-      color: black;
-      padding: 10px 22px;
-      text-align: center;
-      text-decoration: none;
-      font-size: 16px;
-      margin: 4px 2px;
-    }
+		.history {
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		left: 10%;
+		}
 
-    table {
-      vertical-align: top;
-      text-align: center;
-    }
+		.button {
+		color: black;
+		padding: 10px 22px;
+		text-align: center;
+		text-decoration: none;
+		font-size: 19px;
+		margin: 4px 2px;
+		box-shadow: 2px 2px 4px #000000;
+		width: 100%;
+		}
 
-    tr {
-      height: 30px;
-      background-color: white;
-      color: black;
-    }
+		table {
+		vertical-align: top;
+		text-align: center;
+		}
 
-    th {
-      background-color: pink;
-      color: black;
-    }
+		tr {
+		height: 30px;
+		background-color: white;
+		color: black;
+		font-size: 24px;
+		}
 
-    table,
-    th,
-    td {
-      border: 1px solid black;
-    }
+		th {
+		background-color: #cf7e38;
+		color: black;
+		font-size: 24px;
+		}
 
-    .header {
-      width: 80%;
-      margin: 0 auto;
-      height: 50px;
-      border-bottom: 1px solid #000;
-    }
-    .header-tit{
-      margin-top: 13px;
-    }
-    .header-tit img{
-      width: 20px;
-      height: 20px;
-      margin-right: 5px;
-    }
-    .arrow{
-      display: inline-block;
-    }
-    .btnDown {
-      position: relative;
-      float: right;
-      min-width: 30px;
-    }
+		table,
+		th,
+		td {
+		border: 1px solid black;
+		}
 
-    .clear::after {
-      content: '';
-      clear: both;
-      display: block;
-    }
+		.header {
+		width: 80%;
+		margin: 0 auto;
+		height: 50px;
+		border-bottom: 1px solid #000;
+		}
+		.header-tit{
+		margin-top: 13px;
+		}
+		.header-tit img{
+		width: 20px;
+		height: 20px;
+		margin-right: 5px;
+		}
+		.arrow{
+		display: inline-block;
+		}
+		.btnDown {
+		position: relative;
+		float: right;
+		min-width: 30px;
+    	}
 
-    {#.active {#}
-    {#  transform:rotateX(180deg);#}
-    {#}#}
-    ul{
-      list-style: none;
-    }
-    .downList{
-      position:absolute;
-      top: 40px;
-      z-index: 2;
-      border: 1px solid #999;
-    }
-    .downList li{
-      padding: 10px;
-      white-space: nowrap;
-      background-color: #fff;
-      border-bottom: 1px solid #999;
-    }
-    .downList li:last-child{
-      border-bottom:none;
-    }
-    a{
-      text-decoration: none;
-    }
-  </style>
+		.clear::after {
+		content: '';
+		clear: both;
+		display: block;
+		}
+
+		{#.active {#}
+		{#  transform:rotateX(180deg);#}
+		{#}#}
+
+		ul{
+		list-style: none;
+		}
+		.downList{
+		position:absolute;
+		top: 40px;
+		z-index: 2;
+		border: 1px solid #999;
+		}
+		.downList li{
+		padding: 10px;
+		white-space: nowrap;
+		background-color: #fff;
+		border-bottom: 1px solid #999;
+		}
+		.downList li:last-child{
+		border-bottom:none;
+		}
+		a{
+		text-decoration: none;
+		}
+		.bigtitle{
+		text-align: center;
+		font-family:Arial, Helvetica, sans-serif;
+		font-size:50px;
+		background-color: #e6ad4c;
+		}
+		.smalltail{
+		text-align: center;
+		font-family:Arial, Helvetica, sans-serif;
+		font-size:30px;
+		background-color: #e6ad4c;
+		color: white;
+		}
+		.ttlayout{
+		margin: 3% auto;
+		padding: 10px 0px 10px 0px;
+		background-color: #f2cc8a;
+		}
+		#imgInlog1{
+		position: absolute;
+		width: 240px;
+		height: 140px;
+		}
+
+	  </style>
 </head>
+<!-- head end-->
+
 
 <body>
+
+
+	  <div>
+	  	<img src="/static/2.jpg" id="imgInlog1">
+	  </div>
   <div class="header">
     <div class="btnDown clear">
+
+
         {% if current_user.username %}
               <div class="header-tit" onclick="login()">
                 <img src="/static/logo1.png" alt=""  width="100px" height="100px">
@@ -136,9 +179,10 @@ Editor:  BBEdit
               </div>
 
               <ul class="downList" style="display: none;" id="login">
-{#                <li><a HREF="/">{{ request.user.username }}</a></li>#}
+			  {#<li><a HREF="/">{{ request.user.username }}</a></li>#}
                 <li></li>
               </ul>
+
         {% else %}
             <div class="header-tit" onclick="login()">
                 <img src="/static/logo.png" alt="" width="100px" height="100px">
@@ -150,20 +194,27 @@ Editor:  BBEdit
               </ul>
         {% endif %}
 
+
     </div>
   </div>
-  <h1 style="text-align: center">Home page</h1>
+
+  <div class="ttlayout">
+  <h1 class="bigtitle">Home page</h1>
+  </div>
+
   <div class="container">
     <div class="history">
       <div class="box">
-        <a HREF="/add_task"><button class="button">add Task</button></a>
+        <a HREF="/add_task"><button class="button">Add</br> Task</button></a>
       </div>
+      </br>
       <div class="box">
-        <a HREF="/history"><button class="button">view History</button></a>
+        <a HREF="/history"><button class="button">View</br> History</button></a>
       </div>
     </div>
 
-    <table class="schedule" , style="width: 60%;margin-left:auto;margin-right:auto">
+    <table class="schedule" , style="width: 60%;margin-left:auto;margin-right:auto;">
+      <col style="width:12%">
       <col style="width:12%">
       <col style="width:12%">
       <col style="width:12%">
@@ -216,9 +267,26 @@ Editor:  BBEdit
       }else{
         login.style.display = 'block'
       }
-      
+
+    }
+
+    function showWin(content){
+        console.log(content)
+        if(content){
+            window.alert(content)
+        }else {
+            window.alert("task no description!")
+        }
+
     }
   </script>
+
+
+
+  <div class="ttlayout">
+  <p class="smalltail">Let's go</p>
+  </div>
+
 </body>
 
 </html>
